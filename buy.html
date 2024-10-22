@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+</head>
+<style>
+     body{
+        margin: auto;
+        text-align: center;
+        background-color: #8fc79a;
+        font-weight: bold;
+    }
+    #h11{
+        font-size: xx-large;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: #5e9387;
+        text-shadow: 3px 4px 2px #cee9b6;
+    }
+    #form{
+        height: 300px;
+        width: 360px;
+        margin: auto;
+        margin-top: 2%;
+        background-color: #cee9b6;
+        box-shadow: 2px 3px 4px;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+
+    }
+    #fname, #number{
+        height: 25px;
+        width: 300px;
+        margin-top: 2%;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+
+    }
+    #address{
+        height: 100px;
+        width: 300px;
+        margin-top: 3%;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+
+    }
+    #submit, #submit1{
+        height: 35px;
+        width: 100px;
+        border: none;
+        font-size: larger;
+        font-style: italic;
+        font-weight: bold;
+        margin-top: 5%;
+        background-color: #8fc79a;
+        box-shadow: 2px 2px 3px;
+    }
+    #show{
+        display: none;
+    }
+</style>
+<body>
+    <h1 id="h11">payment informations</h1>
+    <div  id="form">
+        <input type="text" name="name" id="fname" placeholder="enter your full name"><br>
+        <input type="number" name="number" id="number" placeholder="enter your phone number"><br>
+        <textarea name="address" id="address" placeholder="enter yuor address"></textarea><br>
+        <input type="submit" onclick="tea()" value="submit" id="submit">
+        
+    </div>
+    <div id="show">
+        <p>click the button below to chat with us</p>
+    <a href="https://wa.me/2348102758144"><input type="button" value="START" id="submit1"></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script>
+        function tea(){
+            if(document.getElementById('fname').value < 5){
+                Swal.fire({
+              icon:'warning',
+              title:'',
+              text:'your full name can not be less than 5 alphabet',
+              footer:'&copy yard and rabbit business center 2021'
+          });
+                return false;
+            }else if(document.getElementById('number').value.length != 11){
+                Swal.fire({
+              icon:'warning',
+              title:'',
+              text:'enter a valid phone number',
+              footer:'&copy yard and rabbit business center 2021'
+          });
+
+                return false;
+            }else if(document.getElementById('address').value < 1){
+                Swal.fire({
+              icon:'warning',
+              title:'',
+              text:'your address can not be blank',
+              footer:'&copy yard and rabbit business center 2021'
+          });
+                return false;
+            }else{
+            document.getElementById('form').style.display = "none";
+            document.getElementById('show').style.display = "block";
+
+            Swal.fire({
+              icon:'success',
+              title:'',
+              text:'you are successifull submit your info',
+              footer:'&copy yard and rabbit business center 2021'
+          });
+                 }
+                
+           
+            
+        }
+    </script>
+</body>
+</html>

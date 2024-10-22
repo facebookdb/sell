@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+</head>
+<style>
+    body{
+        margin: auto;
+        text-align: center;
+        background-color: #8fc79a;
+    }
+    #h11{
+        font-size: xx-large;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: #5e9387;
+        text-shadow: 3px 4px 2px #cee9b6;
+    }
+    #nav{
+        margin: auto;
+        width: auto;
+        height: 50px;
+        background-color: #cee9b6;
+        box-shadow: 2px 3px 3px;
+    }
+    #in1, #in2, #in3, #in4{
+        margin-top: 0.80%;
+        margin-left: 2%;
+        height: 30px;
+        width: 120px;
+        font-size: larger;
+        font-style: italic;
+        font-weight: bold;
+        border: none;
+        box-shadow: 2px 2px 2px;
+        background-color: #8fc79a;
+    }
+    #item{
+        margin: auto;
+        text-align: center;
+        width: 360px;
+    }
+    a{
+       text-decoration: none;
+       color: black;
+       font-size: large;
+       font-style: italic;
+       font-weight: bolder;
+    }
+    #gombe{
+       text-decoration: none;
+       color: black;
+       font-size: large;
+       border: none;
+       background-color: #8fc79a;
+       font-style: italic;
+       font-weight: bolder;
+    }
+</style>
+<body>
+    <h1 id="h11">welcome to ours avalable branches</h1>
+
+    <div id="nav">
+      <a href="yard.html"><input type="button" value="yards" id="in1"></a>
+       <a href="rabbit.html"><input type="button" value="rabbits" id="in2"></a>
+      <a href="service.html"><input type="button" value="our service" id="in3"></a>
+      <a href="location.html"><input type="button" value="locations" id="in4" style="background-color: green;"></a>
+
+    </div >
+    <div id="item">
+        <p>selecct the branch that is close to you to see the location</p>
+  <ol>
+     <li><a href="https://wa.me/2348102758144"><h4 id="pkm">POTISKUM BRANCHE LOCATION</h4></a></li>
+     <li><input type="button" onclick="tea()" value="GOMBE BRANCHE LOCATION" id="gombe"><h4 id=""></li>
+     </ol>
+    
+   <hr>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script>
+    function tea(){
+     Swal.fire({
+              icon:'warning',
+              title:'',
+              text:'please contact potiskum location for more info',
+              footer:'&copy yard and rabbit business center 2021'
+          });
+        }
+</script>
+</body>
+</html>

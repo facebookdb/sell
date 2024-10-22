@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+<style>
+    body{
+        margin: auto;
+        text-align: center;
+        background-color: #8fc79a;
+    }
+    #h11{
+        margin-top: 2%;
+        font-size: xx-large;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic;
+        text-transform: uppercase;
+        font-weight: bolder;
+        color: #5e9387;
+        text-shadow: 3px 4px 2px #cee9b6;
+    }
+    /* #div{
+        width: 500px;
+        height: auto;
+        margin: auto;
+        margin-top: 3%;
+        box-shadow: 3px 3px 2px;
+
+    } */
+    #btn1{
+        display: none;
+    }
+    #demo{
+        width: 700px;
+        margin: auto;
+        margin-top: 3%;
+        font-weight: bold;
+        font-size: 20px;
+        box-shadow: 3px 3px 2px;
+    }
+    #p1{
+        display: none;
+        color: red;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #btn1, #btn{
+        height: 50px;
+        width: 120px;
+        border: none;
+        margin: auto;
+        font-size: large;
+        font-weight: bolder;
+        font-style: italic;
+        background-color: #8fc79a;
+        box-shadow:  3px 4px 5px #5e9387;
+    }
+    a{
+        text-decoration: none;
+        font-size: large;
+        font-weight: bolder;
+        font-style: italic;
+    }
+</style>
+<body> 
+    <h1 id="h11">welcome to yard and rabbits business center</h1>
+   
+    <!-- <input type="button" onclick="tea()" value="CLICK ME" id="btn"> -->
+  
+
+
+   <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+        <button onclick = "fun()" id="btn">CLICK ME</button>
+        <p id = "demo"></p>
+        <p id="p1">click the button below to see our  available products</p>
+        <a href="yard.html"><input type="button" value="CONTINUE" id="btn1"></a>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script>
+             Swal.fire({
+              icon:'success',
+              title:'',
+              text:'click the button to see our purpose',
+              footer:'&copy yard and rabbit business center 2021'
+          });
+        var i = 0;
+        var speed = 50;
+        var txt = 'we are selling yards and some rabbits the purpose of developing this software is to helped our team and customers around the nigerian to get more easier for buying ours products in chipper price because our product has 30% of discount and we have branches around 2 states in nigerian gombe and yobe and we are working smart to ensure that we conque each every state in nigerian to use with ours product. And we generated responsive voice in our software to those that they can not read';
+            function fun(){
+                if(i <  txt.length){
+                    document.getElementById('btn').style.display = "none";
+                    document.getElementById("demo").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(fun, speed);
+                    responsiveVoice.speak(txt); 
+
+                }else if(i == txt.length){
+                document.getElementById('btn1').style.display = "block";
+                document.getElementById('p1').style.display = "block";
+                
+        }
+            }
+        </script>
+   <!-- <script>
+         Swal.fire({
+              icon:'success',
+              title:'',
+              text:'click the button to see our purpose',
+              footer:'&copy yard and rabbit business center 2021'
+          });
+        
+        var i = 0;
+        var text = "we are selling yards and some rabbits the purpose of developing this software is to helped our team and customers around the nigerian to get more easier for buying ours products in chipper price because our product has 30% of discount and we have branches around 2 states in nigerian gombe and yobe and we are working smart to ensure that we conque each every state in nigerian to use with ours product. And we generated responsive voice in our software to those that they can't read. ";
+        var speed = 50;
+        function tea(){
+            if(i < text.length){
+                document.getElementById('p').innerHTML += text.charAt(i);
+                i++;
+                setTimeout(tea, speed);
+                
+                document.getElementById('btn').style.display = "none";
+            }else if(i == text.length){
+                document.getElementById('btn1').style.display = "block";
+                document.getElementById('p1').style.display = "block";
+             
+                responsiveVoice.speak(text);
+        }
+    }
+    </script> -->
+</body>
+</html>
